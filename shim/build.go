@@ -24,6 +24,20 @@ func main() {
 
 	project := api.NewAppProject(projectPath)
 
+	err = api.InstallPackage(project, "github.com/Azure/azure-functions-go")
+
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
+
+	err = api.InstallPackage(project, "github.com/Azure/azure-functions-go/azfunc")
+
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
+
 	azPath, err := project.GetPath("github.com/Azure/azure-functions-go")
 
 	if azPath == "" {

@@ -1,0 +1,25 @@
+{
+  "name": "sample-trigger",
+  "type": "flogo:trigger",
+  "version": "0.0.1",
+  "shim": "main",
+  "title": "Sample Azure Trigger",
+  "description": "Sample Azure Trigger",
+  "homepage": "https://github.com/project-flogo/tree/master/examples/trigger",
+  "output": [
+    {
+      "name": "body",
+      "type": "any"
+    }
+  ],
+  "reply": [
+    {
+      "name": "response",
+      "type": "any"
+    },
+    {
+      "name": "error",
+      "type": "string"
+    }
+  ]
+}

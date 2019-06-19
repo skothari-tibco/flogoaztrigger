@@ -24,7 +24,7 @@ func main() {
 
 	project := api.NewAppProject(projectPath)
 
-	err = api.InstallPackage(project, "github.com/Azure/azure-functions-go")
+	err = api.InstallPackage(project, "github.com/Azure/azure-functions-go@v0.1.0")
 
 	if err != nil {
 		fmt.Println(err)
